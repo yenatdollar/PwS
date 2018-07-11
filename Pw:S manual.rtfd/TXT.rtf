@@ -1,100 +1,63 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
-}
-{\colortbl;\red255\green255\blue255;}
-\margl1440\margr1440\vieww19880\viewh11620\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+￼
 
-\f0\fs24 \cf0 {{\NeXTGraphic PwSlogoS.png \width2120 \height3600
-}�}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+PwS (Painting with Sound)
+2018
 
-\b \cf0 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
-\cf0 \
-PwS (Painting with Sound)\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+Pw/S (Painting with Sound) is a Pure Data patch which corresponds with Xbox 360 Kinect Senser to implement Multi-Touch technology a canvas to trigger a sound when a brush touches the canvas.
 
-\b0 \cf0 2018\
-\pard\pardeftab720
-\cf0 \
-Pw/S (Painting with Sound) is a Pure Data patch which corresponds with\'a0Xbox 360 Kinect Senser to implement Multi-Touch technology a canvas to trigger a sound when a brush touches the canvas.\
-\
-
-\b Zip Contents
-\b0 \
+Zip Contents
 	Pw/S.pd
-\f1\b \
+	Pw/S manual
+	LKB installation guide
+	LICENSE.txt
+		(reference implementations of SimpleMessageSystem / https://playground.arduino.cc/Code/SimpleMessageSystem) 
+	convert file
+		(reference implementations of PureData TUIO 1.1 client / https://github.com/mkalten/TUIO11_PureData) 
+	TUIO file
+	TuioClient.dll
+	TuioClient.pd_darwin
 
-\f0\b0 	Pw/S manual\
 
-\f1\b 	
-\f0\b0 LKB installation guide\
-	LICENSE.txt\
-		(reference implementations of SimpleMessageSystem / {\field{\*\fldinst{HYPERLINK "https://playground.arduino.cc/Code/SimpleMessageSystem"}}{\fldrslt https://playground.arduino.cc/Code/SimpleMessageSystem}}) \
-	convert file\
-		(reference implementations of PureData TUIO 1.1 client / {\field{\*\fldinst{HYPERLINK "https://github.com/mkalten/TUIO11_PureData"}}{\fldrslt https://github.com/mkalten/TUIO11_PureData}}) \
-	TUIO file\
-	TuioClient.dll\
-	TuioClient.pd_darwin\
-
-\f1\b \
-
-\f0 \
 Requirements
-\b0 \
-	- hardware- \
-	Computer (MacOSX10.9 up)\
-	Xbox 360 Kinect Sensor Bar (model 1414)\
-	- software -\
-	Pure Data Extended (Pd-0.43.4-extended-macosx105-i386.dmg) / {\field{\*\fldinst{HYPERLINK "https://puredata.info/downloads/pd-extended"}}{\fldrslt https://puredata.info/downloads/pd-extended}}\
-	Ludique\'92s Kinect Bundle (LKB-0.1-OSX.dmg) / {\field{\*\fldinst{HYPERLINK "https://code.google.com/archive/p/lkb-kinect-bundle/"}}{\fldrslt https://code.google.com/archive/p/lkb-kinect-bundle/}}\
-	- etc -\
-	Brush\
-	Canvas \
-\pard\pardeftab720\partightenfactor0
-\cf0 	Clear Plastic Cups\
-	Paints (White and Colors)\
-\pard\pardeftab720
-\cf0 	- optional -
-\b \
+	- hardware- 
+	Computer (MacOSX10.9 up)
+	Xbox 360 Kinect Sensor Bar (model 1414)
+	- software -
+	Pure Data Extended (Pd-0.43.4-extended-macosx105-i386.dmg) / https://puredata.info/downloads/pd-extended
+	Ludique’s Kinect Bundle (LKB-0.1-OSX.dmg) / https://code.google.com/archive/p/lkb-kinect-bundle/
+	- etc -
+	Brush
+	Canvas 
+	Clear Plastic Cups
+	Paints (White and Colors)
+	- optional -
+	Color Sensor Module
 
-\b0 	Color Sensor Module\
 
-\b \
-\
 Setup
-\b0 \
-	1.	download and install Pure Data Extended\
-	2.	download and install Ludique\'92s Kinect Bundle (follow LKB installation guide)\
-	3.	connect Xbox 360 Kinect\'92s USB port to an available USB port on your computer\
-		(if you have Color Sensor Module (CSM), you also connect CSM\'92s USB port to an available USB port on your computer)\
-	4.	open and set up LKB (reference tutorial: {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=hzEojZ4l1i0"}}{\fldrslt https://www.youtube.com/watch?v=hzEojZ4l1i0}})\
-		1.	click \'93Camera 0\'94 of 2D viewer(s) and touch settings	 \
-		2.	click \'93Select Valid Zone\'93 and calibrate canvas, then click \'93Set Background\'94\
-		3.	close Kinect Touch Setting\'94 window\
-		4.	click and open \'93Touch Extractor and TUIO sender\'94\
-		5.	click to mark \'93Send Tuio Data\'94\
-		6. 	leave \'93Touch Extractor\'94 window open\
-	5.	open PwS.pd\
-\
+	1.	download and install Pure Data Extended
+	2.	download and install Ludique’s Kinect Bundle (follow LKB installation guide)
+	3.	connect Xbox 360 Kinect’s USB port to an available USB port on your computer
+		(if you have Color Sensor Module (CSM), you also connect CSM’s USB port to an available USB port on your computer)
+	4.	open and set up LKB (reference tutorial: https://www.youtube.com/watch?v=hzEojZ4l1i0)
+		1.	click “Camera 0” of 2D viewer(s) and touch settings	 
+		2.	click “Select Valid Zone“ and calibrate canvas, then click “Set Background”
+		3.	close Kinect Touch Setting” window
+		4.	click and open “Touch Extractor and TUIO sender”
+		5.	click to mark “Send Tuio Data”
+		6. 	leave “Touch Extractor” window open
+	5.	open PwS.pd
 
-\b Play
-\b0 \
-	1.	set a value in \'93CSM\'94 number box\
-		(if you have Color Sensor Module (CSM), place a Clear Plastic Cup with White paint on CSM, click \'93white balance\'94 and sit it for about 3 seconds, \
-		then replace with another Clear Plastic Cup with your self-mixed paint)\
-	2.	click \'93set\'94 to assign the value of \'93CSM\'94 to \'93frequency\'94 \
-	3.	arrange \'93attack\'94, \'93decay\'94 and \'93sustain\'94 by value of each slider\
-	4.	adjust sound\'92s \'93volume\'94 by value of the slider\
-	5.	bring LKB\'92s \'93Touch Extractor\'94 window to front\
-	6.	touch canvas to trigger the sound\
-\
+Play
+	1.	set a value in “CSM” number box
+		(if you have Color Sensor Module (CSM), place a Clear Plastic Cup with White paint on CSM, click “white balance” and sit it for about 3 seconds, 
+		then replace with another Clear Plastic Cup with your self-mixed paint)
+	2.	click “set” to assign the value of “CSM” to “frequency” 
+	3.	arrange “attack”, “decay” and “sustain” by value of each slider
+	4.	adjust sound’s “volume” by value of the slider
+	5.	bring LKB’s “Touch Extractor” window to front
+	6.	touch canvas to trigger the sound
 
-\b License
-\b0  \
-\pard\pardeftab720
+License 
+   	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-\f2 \cf0   
-\f0  	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.\
-\
-}
